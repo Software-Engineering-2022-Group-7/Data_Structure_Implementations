@@ -106,24 +106,24 @@ LinkedBSTNode<K, V> *AVL<K, V>::removeFromSubtree(LinkedBSTNode<K, V> *current, 
         throw runtime_error("The key does not exist.");
     } else if (key > current->getKey()) {
         current->setRight(removeFromSubtree(current->getRight(), key));
-        return current;
+//        return current;
     } else if (key < current->getKey()) {
         current->setLeft(removeFromSubtree(current->getLeft(), key));
-        return current;
+//        return current;
     } else {
         if (current->getLeft() == nullptr && current->getRight() == nullptr) {
             delete current;
             current = nullptr;
-            return current;
-        } else if (current->getLeft() == nullptr) {
+//            return current;
+        } else if (current->getLeft() == nullptr && current->getRight() != nullptr) {
             auto *replace_node = current->getRight();
             delete current;
             current = replace_node;
-        } else if (current->getRight() == nullptr) {
+        } else if (current->getRight() == nullptr && current->getLeft() != nullptr) {
             auto *replace_node = current->getLeft();
             delete current;
             current = replace_node;
-        } else if (current->getLeft() != nullptr && current->getRight() != nullptr) {
+        } else {
             pair<K, V> node_value = getMaxInSubtree(current->getLeft());
             // delete the node that is used to replace
             current->setLeft(removeFromSubtree(current->getLeft(), node_value.first));

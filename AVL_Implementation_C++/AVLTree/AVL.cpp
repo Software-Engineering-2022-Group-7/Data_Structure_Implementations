@@ -217,8 +217,8 @@ int main() {
   // tree->checkInvariants();
 
   /** update */
-  LinkedBST<string, int> *tree = makeExampleAVL();
-  tree->update("1", 3);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // tree->update("1", 3);
   // cout << (3 == tree->get("1"));
   // tree->update("1", 5);
   // cout << (5 == tree->get("1"));
@@ -227,122 +227,115 @@ int main() {
   // tree->checkInvariants();
 
   /** contains */
-  // const tree = makeExampleAVL();
-  // console.log(true == tree.contains("1"));
-  // console.log(false == tree.contains("10"));
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // cout << (true == tree->contains("1"));
+  // cout << (false == tree->contains("10"));
+  // tree->checkInvariants();
 
   /** remove */
-  // const tree = makeExampleAVL();
-  // tree.remove("6");
-  // console.log(false == tree.contains("6"));
-  // tree.remove("7");
-  // console.log(false == tree.contains("7"));
-  // tree.displayTree();
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = makeExampleAVL();;
+  // tree->remove("6");
+  // cout << (false == tree->contains("6"));
+  // tree->remove("7");
+  // cout << (false == tree->contains("7"));
+  // tree->displayTree();
+  // tree->checkInvariants();
 
   /** reLeftLeftAVL*/
-  // const tree = reLeftLeftAVL();
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = reLeftLeftAVL();
+  // tree->checkInvariants();
 
   /** reRightRightAVL*/
-  // const tree = reRightRightAVL();
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = reRightRightAVL();
+  // tree->checkInvariants();
 
   /** reLeftRightAVL*/
-  // const tree = reLeftRightAVL();
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = reLeftRightAVL();
+  // tree->checkInvariants();
 
   /** reRightLeftAVL*/
-  // const tree = reRightLeftAVL();
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = reRightLeftAVL();
+  // tree->checkInvariants();
 
   /** getKeys */
-  // const tree = makeExampleAVL();
-  // const realKeys = tree.getKeys();
-  // const expectedKeys = ["6", "2", "1", "4", "3", "7", "9"];
-  // console.log(expectedKeys.length == realKeys.length);
-  // for(let i = 0; i < expectedKeys.length; i++){
-  //   console.log(expectedKeys[i] == realKeys[i]);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // vector<string> realKeys = tree->getKeys();
+  // vector<string> expectedKeys = {"6", "2", "1", "4", "3", "7", "9"};
+  // cout << (expectedKeys.size() == realKeys.size());
+  // for(int i = 0; i < expectedKeys.size(); i++){
+  //   cout << (expectedKeys.at(i) == realKeys.at(i));
   // }
-  // tree.checkInvariants();
+  // tree->checkInvariants();
 
   /** getItems */
-  // const tree = makeExampleAVL();
-  // const realItems = tree.getItems();
-  // const expectedItems = [["6", 6], ["2", 2], ["1", 1], ["4", 4], ["3", 3],
-  //                       ["7", 7], ["9", 9]];
-  // console.log(expectedItems.length == realItems.length);
-  // for(let i = 0; i < expectedItems.length; i++){
-  //   console.log(expectedItems[i][0] == realItems[i][0] && expectedItems[i][1] == realItems[i][1]);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // vector<pair<string, int>> realItems = tree->getItems();
+  // vector<pair<string, int>> expectedItems = {{"6", 6}, {"2", 2}, {"1", 1}, {"4", 4}, {"3", 3},
+  //                       {"7", 7}, {"9", 9}};
+  // cout << (expectedItems.size() == realItems.size());
+  // for(int i = 0; i < expectedItems.size(); i++){
+  //   cout << (expectedItems.at(i).first == realItems.at(i).first && expectedItems.at(i).second == realItems.at(i).second);
   // }
-  // tree.checkInvariants();
+  // tree->checkInvariants();
 
   /** getHeight */
-  // const tree = makeExampleAVL();
-  // console.log(3 == tree.getHeight());
-  // const emptyTree = new AVL();
-  // console.log(-1 == emptyTree.getHeight());
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // cout << (3 == tree->getHeight());
+  // LinkedBST<string, int> *emptyTree = new AVL<string, int>();
+  // cout << (-1 == emptyTree->getHeight());
+  // tree->checkInvariants();
+  // emptyTree->checkInvariants();
 
   /** getMax */
-  // const tree = makeExampleAVL();
-  // console.log("9" == tree.getMaxKey());
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // cout << ("9" == tree->getMaxKey());
+  // tree->checkInvariants();
 
   /** getMin */
-  // const tree = makeExampleAVL();
-  // console.log("1" == tree.getMinKey());
-  // tree.checkInvariants();
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // cout << ("1" == tree->getMinKey());
+  // tree->checkInvariants();
 
   /** ExamplePreOrderTraversal */
-  // const tree = makeExampleAVL();
-  // const realTraversal = tree.traversePreOrder();
-  // const expectedTraversal = [["6", 6], ["2", 2], ["1", 1], ["4", 4], ["3", 3],
-  //                           ["7", 7], ["9", 9]];
-  // console.log(expectedTraversal.length == realTraversal.length);
-  // for(let i = 0; i < expectedTraversal.length; i++){
-  //   console.log(expectedTraversal[i][0] == realTraversal[i][0] &&
-  //               expectedTraversal[i][1] == realTraversal[i][1]);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // vector<pair<string, int>> realTraversal = tree->traversePreOrder();
+  // vector<pair<string, int>> expectedTraversal = {{"6", 6}, {"2", 2}, {"1", 1}, {"4", 4}, {"3", 3}, {"7", 7}, {"9", 9}};
+  // cout << (expectedTraversal.size() == realTraversal.size());
+  // for(int i = 0; i < expectedTraversal.size(); i++){
+  //   cout << (expectedTraversal.at(i).first == realTraversal.at(i).first && expectedTraversal.at(i).second == realTraversal.at(i).second);
   // }
-  // tree.checkInvariants();
+  // tree->checkInvariants();
 
   /** ExamplePostOrderTraversal */
-  // const tree = makeExampleAVL();
-  // const realTraversal = tree.traversePostOrder();
-  // const expectedTraversal = [["1", 1], ["3", 3], ["4", 4], ["2", 2], ["9", 9],
-  //                           ["7", 7], ["6", 6]];
-  // console.log(expectedTraversal.length == realTraversal.length);
-  // for(let i = 0; i < expectedTraversal.length; i++){
-  //   console.log(expectedTraversal[i][0] == realTraversal[i][0] &&
-  //               expectedTraversal[i][1] == realTraversal[i][1]);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // vector<pair<string, int>> realTraversal = tree->traversePostOrder();
+  // vector<pair<string, int>> expectedTraversal = {{"1", 1}, {"3", 3}, {"4", 4}, {"2", 2}, {"9", 9}, {"7", 7}, {"6", 6}};
+  // cout << (expectedTraversal.size() == realTraversal.size());
+  // for(int i = 0; i < expectedTraversal.size(); i++){
+  //   cout << (expectedTraversal.at(i).first == realTraversal.at(i).first && expectedTraversal.at(i).second == realTraversal.at(i).second);
   // }
-  // tree.checkInvariants();
+  // tree->checkInvariants();
 
   /** ExampleInOrderTraversal */
-  // const tree = makeExampleAVL();
-  // const realTraversal = tree.traverseInOrder();
-  // const expectedTraversal = [["1", 1], ["2", 2], ["3", 3], ["4", 4], ["6", 6],
-  //                           ["7", 7], ["9", 9]];
-  // console.log(expectedTraversal.length == realTraversal.length);
-  // for(let i = 0; i < expectedTraversal.length; i++){
-  //   console.log(expectedTraversal[i][0] == realTraversal[i][0] &&
-  //               expectedTraversal[i][1] == realTraversal[i][1]);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // vector<pair<string, int>> realTraversal = tree->traverseInOrder();
+  // vector<pair<string, int>> expectedTraversal = {{"1", 1}, {"2", 2}, {"3", 3}, {"4", 4}, {"6", 6}, {"7", 7}, {"9", 9}};
+  // cout << (expectedTraversal.size() == realTraversal.size());
+  // for(int i = 0; i < expectedTraversal.size(); i++){
+  //   cout << (expectedTraversal.at(i).first == realTraversal.at(i).first && expectedTraversal.at(i).second == realTraversal.at(i).second);
   // }
-  // tree.checkInvariants();
+  // tree->checkInvariants();
 
   /** ExampleLevelOrderTraversal */
-  // const tree = makeExampleAVL();
-  // const realTraversal = tree.traverseLevelOrder();
-  // const expectedTraversal = [["6", 6], ["2", 2], ["7", 7], ["1", 1], ["4", 4],
-  //                           ["9", 9], ["3", 3]];
-  // console.log(expectedTraversal.length == realTraversal.length);
-  // for(let i = 0; i < expectedTraversal.length; i++){
-  //   console.log(expectedTraversal[i][0] == realTraversal[i][0] &&
-  //               expectedTraversal[i][1] == realTraversal[i][1]);
+  // LinkedBST<string, int> *tree = makeExampleAVL();
+  // vector<pair<string, int>> realTraversal = tree->traverseOrderOrder();
+  // vector<pair<string, int>> expectedTraversal = {{"6", 6}, {"2", 2}, {"7", 7}, {"1", 1}, {"4", 4}, {"9", 9}, {"3", 3}};
+  // cout << (expectedTraversal.size() == realTraversal.size());
+  // for(int i = 0; i < expectedTraversal.size(); i++){
+  //   cout << (expectedTraversal.at(i).first == realTraversal.at(i).first && expectedTraversal.at(i).second == realTraversal.at(i).second);
   // }
-  // tree.checkInvariants();
+  // tree->checkInvariants();
 
-    delete tree;
+//    delete tree;
     return 0;
 }

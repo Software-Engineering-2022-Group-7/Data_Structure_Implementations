@@ -32,11 +32,11 @@ bool LinkedBST<K, V>::containsInSubtree(LinkedBSTNode<K, V> *current, K key) {
 
 template<typename K, typename V>
 void LinkedBST<K, V>::updateInSubtree(LinkedBSTNode<K, V> *current, K key, V value) {
-    cout << current->getKey();
     if (current == nullptr) {
         throw runtime_error("The key is not found.");
     } else if (current->getKey() == key) {
         current->setValue(value);
+        return;
     }
 
     if (key > current->getKey()) {
