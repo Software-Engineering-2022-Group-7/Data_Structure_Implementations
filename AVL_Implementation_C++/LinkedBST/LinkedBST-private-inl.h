@@ -1,5 +1,7 @@
 #include "LinkedBST.h"
 
+using namespace std;
+
 template<typename K, typename V>
 V LinkedBST<K, V>::findInSubtree(LinkedBSTNode<K, V> *current, K key) {
     if (current == nullptr) {
@@ -30,6 +32,7 @@ bool LinkedBST<K, V>::containsInSubtree(LinkedBSTNode<K, V> *current, K key) {
 
 template<typename K, typename V>
 void LinkedBST<K, V>::updateInSubtree(LinkedBSTNode<K, V> *current, K key, V value) {
+    cout << current->getKey();
     if (current == nullptr) {
         throw runtime_error("The key is not found.");
     } else if (current->getKey() == key) {
@@ -219,4 +222,19 @@ void LinkedBST<K, V>::verifyKeysBoundedBy(LinkedBSTNode<K, V> *current, bool min
         verifyKeysBoundedBy(current->getRight(), true, current->getKey(),
                             maxApplies, maxBound);
     }
+}
+
+template<typename K, typename V>
+void LinkedBST<K, V>::displaySubtree(LinkedBSTNode<K, V> *current, int space) {
+  if(current == nullptr) {
+    return;
+  }
+  space += 10;
+  displaySubtree(current->getRight(), space);
+  cout << "\n";
+  for(int i = 10; i < space; i++) {
+    cout << "  ";
+  }
+  cout << current->getKey() << "\n";
+  displaySubtree(current->getLeft(), space);
 }

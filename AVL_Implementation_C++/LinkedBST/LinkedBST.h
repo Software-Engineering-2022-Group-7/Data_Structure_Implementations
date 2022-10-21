@@ -76,6 +76,11 @@ public:
     void checkInvariants();
 
     /**
+     * Displays this AVL tree for testing purposes.
+     */
+    void displayTree();
+
+    /**
      * Note that the variable declarations usually should be PRIVATE, but
      * as they should be accessed when implementing AVL Tree, here the
      * variables are declared PUBLIC.
@@ -231,6 +236,13 @@ private:
      */
     void verifyKeysBoundedBy(LinkedBSTNode<K, V> *current, bool minApplies,
                              K minBound, bool maxApplies, K maxBound);
+
+    /**
+     * Given a root node, display the subtree.
+     * @param current The root of the subtree to display.
+     * @param space The amount of space to print each node with.
+     */
+     void displaySubtree(LinkedBSTNode<K, V> *current, int space);
 };
 
 #include "LinkedBST-inl.h"

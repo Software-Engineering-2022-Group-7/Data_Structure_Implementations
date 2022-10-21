@@ -77,12 +77,12 @@ LinkedBSTNode<K, V> *AVL<K, V>::insertInSubtree(LinkedBSTNode<K, V> *current, K 
 
     // Left-left
     if (balance > 1 && key < current->getLeft()->getKey()) {
-        return rightRotate(current);
+        current = rightRotate(current);
     }
 
     // Right-right
-    if (balance < -1 && key > current->getLeft()->getKey()) {
-        return leftRotate(current);
+    if (balance < -1 && key > current->getRight()->getKey()) {
+        current = leftRotate(current);
     }
 
     // Left-right
@@ -92,7 +92,7 @@ LinkedBSTNode<K, V> *AVL<K, V>::insertInSubtree(LinkedBSTNode<K, V> *current, K 
     }
 
     // Right-left
-    if (balance < -1 && key < current->getLeft()->getKey()) {
+    if (balance < -1 && key < current->getRight()->getKey()) {
         current->setRight(rightRotate(current->getRight()));
         return leftRotate(current);
     }

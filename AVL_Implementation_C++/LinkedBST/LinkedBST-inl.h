@@ -1,5 +1,7 @@
 #include "LinkedBST.h"
 
+using namespace std;
+
 template<typename K, typename V>
 LinkedBST<K, V>::LinkedBST() {
     this->size = 0;
@@ -158,4 +160,11 @@ vector<pair<K, V>> LinkedBST<K, V>::traverseLevelOrder() {
     }
     delete queue;
     return vector_list;
+}
+
+template<typename K, typename V>
+void LinkedBST<K, V>::displayTree() {
+  cout << "Tree:\n";
+  displaySubtree(this->root, 0);
+  cout << "\n\n";
 }
