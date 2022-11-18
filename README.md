@@ -4,7 +4,6 @@ This repository contains the actual implementations of the data structures
 previously introduced through visualization. Currently, it has the 
 following implementations:
 
-* **AVL Tree (C++)**
 * **AVL Tree (JavaScript)**
 
 You can find each implementation in the corresponding directory. If you have any question
