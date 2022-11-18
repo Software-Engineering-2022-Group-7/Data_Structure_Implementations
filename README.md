@@ -5,6 +5,7 @@ previously introduced through visualization. Currently, it has the
 following implementations:
 
 * **AVL Tree (JavaScript)**
+* AVL Tree (C++) is currently unavailable.
 
 You can find each implementation in the corresponding directory. If you have any question
 about the code, please visit the _**Implementation**_ section of our website, where we have 
